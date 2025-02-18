@@ -153,4 +153,4 @@ dependencies:
       - transformers==4.49.0
       - yarl==1.18.3
       - zipp==3.21.0
-prefix: ~/anaconda3/envs/selfage__
+prefix: ~/anaconda3/envs/selfage
