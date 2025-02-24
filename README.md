@@ -1,10 +1,11 @@
 # SelfAge: Personalized Facial Age Transformation Using Self-reference Images
+<a href="https://arxiv.org/abs/2502.13987"><img src="https://img.shields.io/badge/arXiv-2502.13987-b31b1b.svg"></a>
 
 ![teaser](docs/teaser.png)
 
 This code is our implementation of the following paper:
 
-Taishi Ito, Yuki Endo, Yoshihiro Kanamori: "SelfAge: Personalized Facial Age Transformation Using Self-reference Images" [arXiv (coming soon)]
+Taishi Ito, Yuki Endo, Yoshihiro Kanamori: "SelfAge: Personalized Facial Age Transformation Using Self-reference Images"
 
 ## Abstract
 > Age transformation of facial images is a technique that edits age-related person's appearances while preserving the identity. Existing deep learning-based methods can reproduce natural age transformations; 
@@ -22,7 +23,7 @@ conda env create -f environment/selfage_env.yml
 
 ### Pretrained Model
 
-Download following pretrained model from path and save to the directory `pretrained_model`.
+Download following pretrained model from the path and save it to the directory `pretrained_model`.
 
 Path | Description
 ---------- | -----------------
@@ -30,11 +31,11 @@ Path | Description
 
 ### Regularization Set
 
-Download following regularization set from path and unzip it.
+Download following regularization set from the path and unzip it.
 
 Path | Description
 ---------- | -----------------
-[Regularization set](https://drive.google.com/file/d/1ldHHqVCPb46vZZKM_rhboxrHc0UtTukc/view?usp=sharing)  |  Regularization set for use in training. Originally created by [sudban3089](https://github.com/sudban3089/ID-Preserving-Facial-Aging) and labeled with DEX age classifier by ourselves.
+[Regularization set](https://drive.google.com/file/d/1ldHHqVCPb46vZZKM_rhboxrHc0UtTukc/view?usp=sharing)  |  Regularization set for use in our training. Originally created by [sudban3089](https://github.com/sudban3089/ID-Preserving-Facial-Aging) and labeled with DEX age classifier by ourselves.
 
 
 ## Train
@@ -66,7 +67,7 @@ accelerate launch scripts/train.py \
 ```
 
 Note:
-* You can specify the base diffusion model to fine-tune with `--base_model`.
+* You can specify the base diffusion model for fine-tuning with `--base_model`.
 
 ## Inference
 
@@ -84,9 +85,9 @@ python scripts/age_editing.py \
 ```
 
 Notes:
-* You can specify base diffusion model with `--base_model`. Change it to match your personalized model if you chose a different one when you trained yourself.
-* Add `--side_by_side` to save all aging results for a input image of a given input side-by-side.
-* You don't have to specify gender, but it can lead to poorer identity preservation.
+* You can specify a base diffusion model with `--base_model`. Change it to match your personalized model if you chose a different one when you trained yourself.
+* Add `--side_by_side` to save all aging results for a given input side-by-side.
+* You don't have to specify gender, but doing so may lead to poorer identity preservation.
 
 ## Citation
 Please cite our paper if you find the code useful:
