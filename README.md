@@ -28,14 +28,16 @@ Download following pretrained model from the path and save it to the directory `
 Path | Description
 ---------- | -----------------
 [DEX age classifier](https://drive.google.com/file/d/1mE_EStue-f7yXGOzpl4qxM3vM270TnLc/view?usp=sharing)  |  VGG age classifier from DEX to estimate the age of the input image. Fine-tuned by [yuval-alaluf](https://github.com/yuval-alaluf/SAM) on the FFHQ-Aging dataset.
+[Trained LoRA weights](https://drive.google.com/file/d/10l6W6lX4avfpCJP4KhP-waj1vfBc7-TQ/view?usp=sharing)  |  LoRA weights trained with self-reference images. 
 
-### Regularization Set
+### Dataset
 
-Download following regularization set from the path and unzip it.
+Download following datasets from the paths and unzip them.
 
 Path | Description
 ---------- | -----------------
 [Regularization set](https://drive.google.com/file/d/1ldHHqVCPb46vZZKM_rhboxrHc0UtTukc/view?usp=sharing)  |  Regularization set for use in our training. Originally created by [sudban3089](https://github.com/sudban3089/ID-Preserving-Facial-Aging) and labeled with DEX age classifier by ourselves.
+[Self-reference and test set](https://drive.google.com/file/d/1sOwOUnaO5GFt3VX5hraz4zLnJBrV4f6O/view?usp=sharing)  |  Self-reference images for training and input images for testing. Obtained by preprocessing a part of [AgeDB dataset](https://www.kaggle.com/datasets/nitingandhi/agedb-database/).
 
 
 ## Train
@@ -75,10 +77,10 @@ Age editing with personalized model in the paper can be done by running the foll
 
 ```
 python scripts/age_editing.py \
---data_path=/path/to/test_data \
+--data_path=/path/to/test_image_dir \
 --gender=[female or male] \
 --exp_dir=/path/to/experiment \
---personalized_path=/path/to/personalized_model  \
+--personalized_path=/path/to/personalized_lora_model  \
 --target_age=0,10,20,30,40,50,60,70,80 \
 --test_batch_size=4 \
 --test_workers=4
