@@ -23,7 +23,7 @@ conda env create -f environment/selfage_env.yml
 
 ### Pretrained Model
 
-Download following pretrained model from the path and save it to the directory `pretrained_model`.
+Download following pretrained models from the paths and save them to the directory `pretrained_model`.
 
 Path | Description
 ---------- | -----------------
