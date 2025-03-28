@@ -28,7 +28,7 @@ Download following pretrained models from the paths and save them to the directo
 Path | Description
 ---------- | -----------------
 [DEX age classifier](https://drive.google.com/file/d/1mE_EStue-f7yXGOzpl4qxM3vM270TnLc/view?usp=sharing)  |  VGG age classifier from DEX to estimate the age of the input image. Fine-tuned by [yuval-alaluf](https://github.com/yuval-alaluf/SAM) on the FFHQ-Aging dataset.
-[Trained LoRA weights](https://drive.google.com/file/d/10l6W6lX4avfpCJP4KhP-waj1vfBc7-TQ/view?usp=sharing)  |  LoRA weights trained with self-reference images. 
+[LoRA weights](https://drive.google.com/file/d/10l6W6lX4avfpCJP4KhP-waj1vfBc7-TQ/view?usp=sharing)  |  LoRA weights trained with self-reference images. 
 
 ### Dataset
 
