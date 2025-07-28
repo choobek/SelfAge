@@ -97,12 +97,10 @@ Please cite our paper if you find the code useful:
 @article{ItoSelfage25,
       author    = {Taishi Ito and Yuki Endo and Yoshihiro Kanamori},
       title     = {SelfAge: Personalized Facial Age Transformation Using Self-reference Images},
-      journal   = {},
-      volume    = {},
-      number    = {},
-      pages     = {},
-      year      = {2025},
-      publisher = {}
+      journal   = {The Visual Computer},
+      volume    = {41},
+      pages     = {6769–6781},
+      year      = {2025}
 }
 ```
 
