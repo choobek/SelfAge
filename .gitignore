@@ -5,3 +5,5 @@ __pycache__/
 experiment/
 pretrained_model/
 regularization/
+data/
+*.pth
